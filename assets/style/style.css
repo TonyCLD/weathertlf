@@ -119,3 +119,93 @@ body {
     font-weight: bold;
     color: var(--ltdarkgreen);
 }
+
+.cityfocus_icon {
+    background-color: var(--darkgreen);
+    border-radius: 10px;
+    padding: 4px;
+    margin: 20px 4px 14px 2px;
+    width: 788px;
+}
+
+.thestats {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 120%;
+    font-size: 30px;
+    color: var(--midgreen);
+    padding: 6px;
+    margin: 40px 75px 0 0;
+}
+
+.bightThestats {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 120%;
+    font-size: 30px;
+    color: var(--ltgreen);
+}
+
+.bigtemp {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 80%;
+    font-size: 180px;
+    color: var(--midgreen);
+    padding: 6px;
+}
+
+.icon {
+    background-color: var(--midgreen);
+    border-radius: 5px;
+    padding: 4px;
+    margin: 4px;
+    width: 180px;
+}
+
+.middlewrapper {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.headerfiveday {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 200%;
+    color: var(--midgreen);
+    margin: 4px;
+    width:800px;
+    border-style: solid;
+    border-width: 4px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: var(--midgreen);
+    margin-bottom: 10px; 
+}
+
+.fiveday {
+    display: flex;
+    width: 800px;
+    /* border-style: dashed; 
+    border-color: var(--ltgreen); */
+}
+
+.fivedayicon1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 160%;
+    font-size: 14px;
+    color: var(--midgreen);
+    padding: 6px;
+    margin: 0;
+}
+
+.bightThestats2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 160%;
+    font-size: 14px;
+    color: var(--ltgreen);
+}
