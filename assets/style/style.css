@@ -1,5 +1,6 @@
 /* Only colors in the graphics except black */
 :root {
+    --darkestgreen: rgb(1, 21, 0);
     --darkgreen: rgb(29, 46, 1);
     --ltdarkgreen: rgb(49, 82, 1);
     --midgreen: rgb(86, 137, 0);
@@ -19,7 +20,7 @@ body {
 
 /* Boxes that hold the three areas of the main page */
 .overall {
-    display: flex;
+    /* display: flex; */
     max-width: 800px;
 }
 
@@ -208,4 +209,103 @@ body {
     line-height: 160%;
     font-size: 14px;
     color: var(--ltgreen);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: var(--darkestgreen);
+    }
+    .overall {
+        display: flex;
+        max-width: 600px;
+    }
+
+    .search_store {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        /* border-style: dashed; */
+        /* border-color: var(--ltgreen); */
+        /* align-content: space-between; */
+    }
+    .search {
+        display: flex;
+        flex-direction: column;
+
+        /* border-style: dashed; */
+        /* border-color: var(--ltgreen); */
+        width: 400px;
+        }
+        .store {
+            display: flex;
+            /* border-style: dashed; */
+            /* border-color: var(--ltgreen); */
+            width: 600px;
+            flex-wrap: wrap;
+            margin-left: 0px;
+            }
+        
+        /* Box that holds the individual stored city */
+        .storedbutton1 {
+            background-color: var(--darkgreen);
+            border-radius: 5px;
+            padding: 4px;
+            text-align: center;
+            margin:4px;
+            width: 380px;
+        }
+        .cityfocus_icon {
+            background-color: var(--darkgreen);
+            border-radius: 10px;
+            padding: 4px;
+            margin: 20px 0 0 4px;
+            width: 380px;
+        }
+
+        .middlewrapper {
+            display: flex;
+            padding-bottom: 20px;
+            flex-direction: column;
+        }
+
+        .thestats {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            line-height: 120%;
+            font-size: 24px;
+            color: var(--midgreen);
+            padding: 6px;
+            margin-top: -30px;
+
+        }
+        
+        .bightThestats {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            line-height: 120%;
+            font-size: 24px;
+            color: var(--ltgreen);
+            margin-top: -30px;
+
+            }
+        
+        .bigtemp {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            line-height: 120%;
+            font-size: 200px;
+            color: var(--midgreen);
+            padding: 0 50px 0 50px;
+        }
+        
+        .icon {
+            background-color: var(--midgreen);
+            border-radius: 5px;
+            padding: 0 70px 0 70px;
+            margin: 10px;
+            width: 200px;
+            align-self: center;
+        }
+
+
 }
