@@ -1,0 +1,121 @@
+/* Only colors in the graphics except black */
+:root {
+    --darkgreen: rgb(29, 46, 1);
+    --ltdarkgreen: rgb(49, 82, 1);
+    --midgreen: rgb(86, 137, 0);
+    --ltgreen: rgb(87, 199, 0);
+}
+
+h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--midgreen);
+    margin: 4px;
+    text-align: center;
+    }
+
+body {
+ background-color: black;   
+}
+
+/* Boxes that hold the three areas of the main page */
+.overall {
+    display: flex;
+    max-width: 800px;
+}
+
+/* Styling for the dashboard header box */
+.header {
+    width:100%;
+    border-style: solid;
+    border-width: 8px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: var(--midgreen);
+    margin-bottom: 10px; 
+}
+
+/* Box tha holds both search and stored search */
+.search_store {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    /* border-style: dashed; */
+    /* border-color: var(--ltgreen); */
+    align-content: space-between;
+}
+
+/* Search for a city words */
+.searchwords {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--ltgreen);
+    margin: 4px;
+}
+
+/* Just holds search buttons and input */
+.search {
+    display: flex;
+    flex-direction: column;
+    /* border-style: dashed; */
+    /* border-color: var(--ltgreen); */
+    width: 233px;
+    }
+
+/* Styling for submit button */
+#submitcity {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--midgreen);
+    margin: -10px 0 0 0;
+    padding: 6px;
+    border-radius: 5px;
+    border-color: var(--ltgreen);
+    border-style: solid;
+    border-width: 1px;
+    background-color: black;
+}
+
+/* Styling for the search input box */
+#searchuserinput {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--midgreen);
+    padding: 6px 6px 6px 12px;
+    border-radius: 5px;
+    border-color: var(--ltgreen);
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--ltgreen);
+}
+
+/* Box that holds the 6 stored searches as buttons */
+.store {
+    display: flex;
+    /* border-style: dashed; */
+    /* border-color: var(--ltgreen); */
+    width: 550px;
+    flex-wrap: wrap;
+    margin-left: 17px;
+    }
+
+/* Box that holds the individual stored city */
+.storedbutton1 {
+    background-color: var(--darkgreen);
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    margin:4px;
+    width: 259px;
+}
+
+/* Styling for the stored city word */
+.storedcity {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--ltdarkgreen);
+}

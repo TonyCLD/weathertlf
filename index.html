@@ -5,26 +5,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Weather Dashboard</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/style/style.css">
     </head>
     
 <body>
-    <overall>
+    <div class="overall">
 
-        <header>
-        Weather Dashboard
-        </header>
+        <div class="header">
+        <h2>Weather Dashboard</h2>
+        </div>
+    </div>
+    <div class="search_store">
 
-        <search_store>
-            <search>
+        <!-- User search box -->
+            <div class="search">
+                <span class="searchwords">Search for a city:</span>
+                <Input type="text" id="searchuserinput" value="Minneapolis">Saint Paul</Input>
+                <input type="submit" value="Search" id="submitcity">Search</input>
+            </div>
 
-            </search>
+            <!-- Saved searches  -->
+            <div class="store">
+                <div class="storedbutton1">
+                    <span class="storedcity">Austin</span>
+                </div>
+                <div class="storedbutton1">
+                    <span class="storedcity">Chicago</span>
+                </div>
+                <div class="storedbutton1">
+                    <span class="storedcity">New York</span>
+                </div>
+                <div class="storedbutton1">
+                    <span class="storedcity">Garrison</span>
+                </div>
+                <div class="storedbutton1">
+                    <span class="storedcity">Orlando</span>
+                </div>
+                <div class="storedbutton1">
+                    <span class="storedcity">Seattle</span>
+                </div>
+            </div>
 
-            <store>
-
-            </store>
-
-        </search_store>
+    </div>
     
         <main_icon>
             <main>
