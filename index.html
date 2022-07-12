@@ -12,7 +12,7 @@
 <div class="overall">
 
         <div class="header">
-        <h2>Weather Dashboard</h2>
+        <h2 id="weatherdash">Weather Dashboard</h2>
         </div>
     </div>
     <div class="search_store">
@@ -54,17 +54,17 @@
 
                     <div class=middlewrapper>
                         <div class="bigtemp">
-                            78°
+                            <span id="bigNum">78</span>°
                         </div>
 
                         <div class="thestats">
-                            Rel_H: <span class="bightThestats" id="#relh_main">46%</span><br>
-                            Wind: <span class="bightThestats" id="#wind_main">12 mph</span><br>
-                            UV Index: <span class="bightThestats" id="#UV_main">0.47</span> 
+                            Rel_H: <span class="bightThestats" id="relh_main">16</span>%<br>
+                            Wind: <span class="bightThestats" id="wind_main">12 mph</span><br>
+                            UV Index: <span class="bightThestats" id="UV_main">0.47</span> 
                         </div>
                         
                         <div class="icon">
-                            <img src="assets/images/stormy.gif" width="180px">
+                            <img src="assets/images/stormy.gif" width="180px" id="bigweathericon">
                         </div>
                     </div>
 
@@ -118,6 +118,7 @@
 
 
 </div>
-<script src="assets/script/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/script/scripts.js"></script>
 </body>
 </html>

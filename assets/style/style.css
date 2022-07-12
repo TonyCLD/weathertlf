@@ -120,7 +120,7 @@ body {
     font-weight: bold;
     color: var(--ltdarkgreen);
 }
-
+/* This is the icon on the main page */
 .cityfocus_icon {
     background-color: var(--darkgreen);
     border-radius: 10px;
@@ -129,6 +129,7 @@ body {
     width: 788px;
 }
 
+/* This is the stats for the searched for city */
 .thestats {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
@@ -139,6 +140,7 @@ body {
     margin: 40px 75px 0 0;
 }
 
+/* These are the stats that will change out, they are brighter */
 .bightThestats {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
@@ -147,6 +149,7 @@ body {
     color: var(--ltgreen);
 }
 
+/* The big temperature number on the main page */
 .bigtemp {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
@@ -156,6 +159,7 @@ body {
     padding: 6px;
 }
 
+/* The icon next to the big temp number. Will need to change with city */
 .icon {
     background-color: var(--midgreen);
     border-radius: 5px;
