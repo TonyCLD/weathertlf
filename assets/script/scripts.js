@@ -1,8 +1,9 @@
 var key = 'd73b91170c6f5780569843dbc01e0481'
-var lat = 47.651375
-var lon = -101.415855
-
+var lat = 47.651375;
+var lon = -101.415855;
 var url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=imperial&appid=${key}`;
+
+
 
 var ourFetch = fetch(url).then(function (resObject) {
     return resObject.json();
@@ -11,8 +12,43 @@ var ourFetch = fetch(url).then(function (resObject) {
    console.log(data);
    $('#bigNum').html(Math.floor(data.current.temp));
    $('#relh_main').html(Math.floor(data.current.humidity));
-   $('#UV_main').html(data.current.uvi);
+   $('#UV_main').html(Math.floor(data.current.uvi));
    $('#wind_main').html(data.current.wind_speed);
+    var uviEl = (Math.floor(data.current.uvi));
+   if (uviEl === 0) {
+    $(".uvindex").css("background-color", "var(--uvlevel0)");
+    $(".uvindex").css("color", "var(--medgreen)"); 
+   }
+   if ((uviEl === 1) || (uviEl === 2)) {
+    $(".uvindex").css("background-color", "var(--uvlevel1)");
+    $(".uvindex").css("color", "var(--darkgreen)");
+    $(".bightThestats3").css("color", "var(--ltgreen)"); 
+   }
+
+   if ((uviEl === 3) || (uviEl === 4) || (uviEl === 5)) {
+    $(".uvindex").css("background-color", "var(--uvlevel2)");
+    $(".uvindex").css("color", "var(--darkgreen)");
+    $(".bightThestats3").css("color", "black"); 
+   }
+
+   if ((uviEl === 6) || (uviEl === 7)) {
+    $(".uvindex").css("background-color", "var(--uvlevel3)");
+    $(".uvindex").css("color", "var(--darkgreen)");
+    $(".bightThestats3").css("color", "black"); 
+   }
+
+   if ((uviEl === 8) || (uviEl === 9) || (uviEl === 10)) {
+    $(".uvindex").css("background-color", "var(--uvlevel4)");
+    $(".uvindex").css("color", "black");
+    $(".bightThestats3").css("color", "black"); 
+   }
+
+   if (uviEl >= 11) {
+    $(".uvindex").css("background-color", "var(--uvlevel5)");
+    $(".uvindex").css("color", "black");
+    $(".bightThestats3").css("color", "black"); 
+   }
+
 
    if (Math.round(data.current.weather[0].id) > 801) {
     $('#bigweathericon').attr("src", "assets/images/cloudy.gif"); 

@@ -5,6 +5,12 @@
     --ltdarkgreen: rgb(49, 82, 1);
     --midgreen: rgb(86, 137, 0);
     --ltgreen: rgb(87, 199, 0);
+    --uvlevel0: rgb(1, 21, 0);
+    --uvlevel1: rgb(86, 137, 0);
+    --uvlevel2: rgb(68, 169, 0);
+    --uvlevel3: rgb(5, 211, 26);
+    --uvlevel4: rgb(46, 249, 0);
+    --uvlevel5: rgb(158, 255, 88);
 }
 
 h2 {
@@ -134,19 +140,38 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     line-height: 120%;
-    font-size: 30px;
+    font-size: 26px;
     color: var(--midgreen);
     padding: 6px;
-    margin: 40px 75px 0 0;
+    margin: 10px 75px 0 0;
+}
+
+.uvindex {
+    border-style: solid;
+    border-color: var(--midgreen);
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 1px;
+    background-color: var(--uvlevel5);
+    color: #000000
 }
 
 /* These are the stats that will change out, they are brighter */
 .bightThestats {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    line-height: 120%;
-    font-size: 30px;
+    line-height: 140%;
+    font-size: 26px;
     color: var(--ltgreen);
+}
+
+/* These are the stats that will change out, just for UV */
+.bightThestats3 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 140%;
+    font-size: 26px;
+    color: var(--midgreen);
 }
 
 /* The big temperature number on the main page */
