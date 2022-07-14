@@ -5,6 +5,7 @@ var ccode = 'US'
 var statec = 'North Dakota'
 var usercityname = 'Garrison'
 var limit = 2
+
 var url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=imperial&appid=${key}`;
 var geourl = `http://api.openweathermap.org/geo/1.0/direct?q=${usercityname},${statec},${ccode}&limit=${limit}&appid=${key}`
 
@@ -16,6 +17,8 @@ var ourFetch = fetch(geourl).then(function (resObject) {
     var latGotEl = (data[0].lat);
     var lonGotEl = (data[0].lon);
     var citynameEl = (data[0].name);
+    parseInt(latGotEl);
+    parseInt(lonGotEl);
     console.log("Name: " + citynameEl + " Latitue: " + latGotEl + " Longitude: " + lonGotEl);
 });
 
@@ -23,7 +26,7 @@ var currentDayEl = moment().format(` LLL`);
 $('#currentDay').text(currentDayEl);
 console.log(currentDayEl);
 
-var cityheaderEl = "Garrison";
+var cityheaderEl = usercityname;
 $('#thecityheader').html(cityheaderEl);
 
 var ourFetch = fetch(url).then(function (resObject) {
@@ -31,11 +34,11 @@ var ourFetch = fetch(url).then(function (resObject) {
     console.log(resObject);
 }).then(function(data){
    console.log(data);
-   $('#bigNum').html(Math.floor(data.current.temp));
-   $('#relh_main').html(Math.floor(data.current.humidity));
-   $('#UV_main').html(Math.floor(data.current.uvi));
-   $('#wind_main').html(data.current.wind_speed);
-    var uviEl = (Math.floor(data.current.uvi));
+   $('#bigNum').html(Math.round(data.current.temp));
+   $('#relh_main').html(Math.round(data.current.humidity));
+   $('#UV_main').html(Math.round(data.current.uvi));
+   $('#wind_main').html(Math.round(data.current.wind_speed));
+    var uviEl = (Math.round(data.current.uvi));
    if (uviEl === 0) {
     $(".uvindex").css("background-color", "var(--uvlevel0)");
     $(".uvindex").css("color", "var(--medgreen)"); 
