@@ -93,30 +93,30 @@ var ourFetch = fetch(url).then(function (resObject) {
     console.log(rainEl); 
     }
 // Begins five day forecast 
-$('#tempf_main1').html(Math.floor(data.daily[0].temp.day));
-$('#relh_main1').html(Math.floor(data.daily[0].humidity));
-$('#UV_main1').html(data.daily[0].wind_speed);
-$('#wind_main1').html(data.daily[0].uvi);
+$('#tempf_main1').html(Math.round(data.daily[0].temp.day));
+$('#relh_main1').html(Math.round(data.daily[0].humidity));
+$('#wind_main1').html(Math.round(data.daily[0].wind_speed));
+$('#UV_main1').html(Math.round(data.daily[0].uvi));
 
-$('#tempf_main2').html(Math.floor(data.daily[1].temp.day));
-$('#relh_main2').html(Math.floor(data.daily[1].humidity));
-$('#UV_main2').html(data.daily[1].wind_speed);
-$('#wind_main2').html(data.daily[1].uvi);
+$('#tempf_main2').html(Math.round(data.daily[1].temp.day));
+$('#relh_main2').html(Math.round(data.daily[1].humidity));
+$('#wind_main2').html(Math.round(data.daily[1].wind_speed));
+$('#UV_main2').html(Math.round(data.daily[1].uvi));
 
-$('#tempf_main3').html(Math.floor(data.daily[2].temp.day));
-$('#relh_main3').html(Math.floor(data.daily[2].humidity));
-$('#UV_main3').html(data.daily[2].wind_speed);
-$('#wind_main3').html(data.daily[2].uvi);
+$('#tempf_main3').html(Math.round(data.daily[2].temp.day));
+$('#relh_main3').html(Math.round(data.daily[2].humidity));
+$('#wind_main3').html(Math.round(data.daily[2].wind_speed));
+$('#UV_main3').html(Math.round(data.daily[2].uvi));
 
-$('#tempf_main4').html(Math.floor(data.daily[3].temp.day));
-$('#relh_main4').html(Math.floor(data.daily[3].humidity));
-$('#UV_main4').html(data.daily[3].wind_speed);
-$('#wind_main4').html(data.daily[3].uvi);
+$('#tempf_main4').html(Math.round(data.daily[3].temp.day));
+$('#relh_main4').html(Math.round(data.daily[3].humidity));
+$('#wind_main4').html(Math.round(data.daily[3].wind_speed));
+$('#UV_main4').html(Math.round(data.daily[3].uvi));
 
-$('#tempf_main5').html(Math.floor(data.daily[4].temp.day));
-$('#relh_main5').html(Math.floor(data.daily[4].humidity));
-$('#UV_main5').html(data.daily[4].wind_speed);
-$('#wind_main5').html(data.daily[4].uvi);
+$('#tempf_main5').html(Math.round(data.daily[4].temp.day));
+$('#relh_main5').html(Math.round(data.daily[4].humidity));
+$('#wind_main5').html(Math.round(data.daily[4].wind_speed));
+$('#UV_main5').html(Math.round(data.daily[4].uvi));
 
 console.log(Math.round(data.daily[0].weather[0].id));
 
