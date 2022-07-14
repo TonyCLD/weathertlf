@@ -1,9 +1,30 @@
 var key = 'd73b91170c6f5780569843dbc01e0481'
 var lat = 47.651375;
 var lon = -101.415855;
+var ccode = 'US'
+var statec = 'North Dakota'
+var usercityname = 'Garrison'
+var limit = 2
 var url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=imperial&appid=${key}`;
+var geourl = `http://api.openweathermap.org/geo/1.0/direct?q=${usercityname},${statec},${ccode}&limit=${limit}&appid=${key}`
 
+var ourFetch = fetch(geourl).then(function (resObject) {
+    return resObject.json();
+    console.log(resObject);
+}).then(function(data){
+    console.log(data);
+    var latGotEl = (data[0].lat);
+    var lonGotEl = (data[0].lon);
+    var citynameEl = (data[0].name);
+    console.log("Name: " + citynameEl + " Latitue: " + latGotEl + " Longitude: " + lonGotEl);
+});
 
+var currentDayEl = moment().format(` LLL`);
+$('#currentDay').text(currentDayEl);
+console.log(currentDayEl);
+
+var cityheaderEl = "Garrison";
+$('#thecityheader').html(cityheaderEl);
 
 var ourFetch = fetch(url).then(function (resObject) {
     return resObject.json();
@@ -42,13 +63,11 @@ var ourFetch = fetch(url).then(function (resObject) {
     $(".uvindex").css("color", "black");
     $(".bightThestats3").css("color", "black"); 
    }
-
    if (uviEl >= 11) {
     $(".uvindex").css("background-color", "var(--uvlevel5)");
     $(".uvindex").css("color", "black");
     $(".bightThestats3").css("color", "black"); 
    }
-
 
    if (Math.round(data.current.weather[0].id) > 801) {
     $('#bigweathericon').attr("src", "assets/images/cloudy.gif"); 

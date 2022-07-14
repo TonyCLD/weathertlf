@@ -24,6 +24,10 @@ body {
  background-color: black;   
 }
 
+#darkbar {
+    color: var(--darkestgreen); 
+} 
+
 /* Boxes that hold the three areas of the main page */
 .overall {
     /* display: flex; */
